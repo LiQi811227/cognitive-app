@@ -19,17 +19,19 @@
                                 <rect key="frame" x="20" y="108" width="335" height="605"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="69" id="sgq-XV-xxy">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="69" id="sgq-XV-xxy" customClass="TableViewCell" customModule="cognitive_app" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="335" height="69"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sgq-XV-xxy" id="ejt-1P-j2q">
                                             <rect key="frame" x="0.0" y="0.0" width="335" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMZ-eI-dql">
-                                                    <rect key="frame" x="253" y="13" width="67" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMZ-eI-dql">
+                                                    <rect key="frame" x="255" y="19.666666666666671" width="60" height="30"/>
                                                     <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="PDx-5b-nDI"/>
+                                                    </constraints>
                                                     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <state key="normal" title="Detail"/>
                                                 </button>
@@ -62,6 +64,15 @@
                                                 <constraint firstItem="dbz-mF-vCa" firstAttribute="leading" secondItem="ejt-1P-j2q" secondAttribute="leading" constant="10" id="mVE-9c-sKm"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="KMZ-eI-dql" firstAttribute="centerY" secondItem="sgq-XV-xxy" secondAttribute="centerY" id="3ox-Fi-C1t"/>
+                                            <constraint firstAttribute="trailing" secondItem="KMZ-eI-dql" secondAttribute="trailing" constant="20" id="SrV-Pd-d7p"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="detail" destination="KMZ-eI-dql" id="oIM-72-QSL"/>
+                                            <outlet property="wordFrom" destination="laf-3W-aJa" id="kAS-Kl-aNp"/>
+                                            <outlet property="wordTo" destination="cfC-T1-pbi" id="z1c-nd-SF7"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -71,12 +82,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="9WZ-tZ-ggo"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="Take a photo and use cognitive service"/>
-                                <connections>
-                                    <segue destination="tkf-eL-3w9" kind="show" id="gDh-C3-RVS"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -92,6 +100,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="List" largeTitleDisplayMode="always" id="IrB-a3-X7w"/>
+                    <connections>
+                        <outlet property="itemTableView" destination="I0N-ya-6oo" id="nMx-cY-ndq"/>
+                        <segue destination="tkf-eL-3w9" kind="show" identifier="toDetailSegue" id="0Mg-Ad-64j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -100,12 +112,12 @@
         <!--Detail-->
         <scene sceneID="ENg-Wt-UYu">
             <objects>
-                <viewController id="tkf-eL-3w9" sceneMemberID="viewController">
+                <viewController id="tkf-eL-3w9" customClass="DetailViewController" customModule="cognitive_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1TX-Ge-Z8h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jodan" translatesAutoresizingMaskIntoConstraints="NO" id="BWj-UO-tcu">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jodan" translatesAutoresizingMaskIntoConstraints="NO" id="BWj-UO-tcu">
                                 <rect key="frame" x="20" y="108" width="335" height="559.33333333333337"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ila-XB-Brc">
@@ -125,6 +137,9 @@
                                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <state key="normal" title="Speech"/>
+                                                <connections>
+                                                    <action selector="speechAction:" destination="tkf-eL-3w9" eventType="touchUpInside" id="xIM-BM-viG"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -160,6 +175,9 @@
                                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <state key="normal" title="发音"/>
+                                                <connections>
+                                                    <action selector="speechAction2:" destination="tkf-eL-3w9" eventType="touchUpInside" id="zhL-5T-7mw"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -183,6 +201,11 @@
                         <viewLayoutGuide key="safeArea" id="SsQ-d6-SV4"/>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" largeTitleDisplayMode="always" id="DhF-1l-d7L"/>
+                    <connections>
+                        <outlet property="image" destination="BWj-UO-tcu" id="86f-J0-qlu"/>
+                        <outlet property="wordFrom" destination="WbK-ET-v61" id="RWZ-Ny-swG"/>
+                        <outlet property="wordTo" destination="vcp-Dz-cjs" id="3IP-Ps-erA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2oN-ZA-ZGj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
