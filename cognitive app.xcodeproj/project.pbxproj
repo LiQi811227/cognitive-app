@@ -15,6 +15,8 @@
 		4E6272D1236D82BA00B9D986 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E6272CF236D82BA00B9D986 /* LaunchScreen.storyboard */; };
 		4E6272DC236D82BA00B9D986 /* cognitive_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6272DB236D82BA00B9D986 /* cognitive_appTests.swift */; };
 		4E6272E7236D82BA00B9D986 /* cognitive_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6272E6236D82BA00B9D986 /* cognitive_appUITests.swift */; };
+		4E8231BA236EB30F001CD6C8 /* TakePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8231B9236EB30F001CD6C8 /* TakePhotoViewController.swift */; };
+		4E8231BC236ED864001CD6C8 /* DescribeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8231BB236ED864001CD6C8 /* DescribeImage.swift */; };
 		4EEE35DB236E1BDD00389628 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEE35DA236E1BDD00389628 /* Item.swift */; };
 		4EEE35DE236E1DF400389628 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEE35DD236E1DF400389628 /* Items.swift */; };
 		4EEE35E0236E208400389628 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEE35DF236E208400389628 /* TableViewCell.swift */; };
@@ -54,6 +56,8 @@
 		4E6272E2236D82BA00B9D986 /* cognitive appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "cognitive appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E6272E6236D82BA00B9D986 /* cognitive_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cognitive_appUITests.swift; sourceTree = "<group>"; };
 		4E6272E8236D82BA00B9D986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E8231B9236EB30F001CD6C8 /* TakePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhotoViewController.swift; sourceTree = "<group>"; };
+		4E8231BB236ED864001CD6C8 /* DescribeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescribeImage.swift; sourceTree = "<group>"; };
 		4EEE35DA236E1BDD00389628 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		4EEE35DD236E1DF400389628 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		4EEE35DF236E208400389628 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 				4E6272CF236D82BA00B9D986 /* LaunchScreen.storyboard */,
 				4E6272D2236D82BA00B9D986 /* Info.plist */,
 				4EEE35E1236E295D00389628 /* DetailViewController.swift */,
+				4E8231B9236EB30F001CD6C8 /* TakePhotoViewController.swift */,
 			);
 			path = "cognitive app";
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				4EEE35DA236E1BDD00389628 /* Item.swift */,
+				4E8231BB236ED864001CD6C8 /* DescribeImage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -316,8 +322,10 @@
 			files = (
 				4EEE35E4236E4D6000389628 /* global.swift in Sources */,
 				4EEE35DB236E1BDD00389628 /* Item.swift in Sources */,
+				4E8231BC236ED864001CD6C8 /* DescribeImage.swift in Sources */,
 				4EEE35DE236E1DF400389628 /* Items.swift in Sources */,
 				4E6272C9236D82B900B9D986 /* ViewController.swift in Sources */,
+				4E8231BA236EB30F001CD6C8 /* TakePhotoViewController.swift in Sources */,
 				4EEE35E0236E208400389628 /* TableViewCell.swift in Sources */,
 				4E6272C5236D82B900B9D986 /* AppDelegate.swift in Sources */,
 				4E6272C7236D82B900B9D986 /* SceneDelegate.swift in Sources */,
@@ -497,6 +505,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K5X9GMF6Y5;
 				INFOPLIST_FILE = "cognitive app/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -515,6 +524,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K5X9GMF6Y5;
 				INFOPLIST_FILE = "cognitive app/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

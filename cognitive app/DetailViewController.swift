@@ -23,16 +23,22 @@ class DetailViewController: UIViewController {
         speech(wordTo.text)
     }
     
+    var segueSource:String = "list"
     var itemID:Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        print(itemID)
-        
-        // display detail
-        display(itemID)
+        if segueSource=="list" {
+            print("From List page, itemID:\(itemID)")
+            
+            // display detail
+            display(itemID)
+        }else{
+            print("From Photo take page, itemID:\(itemID)")
+            
+            // display detail
+            display(itemID)
+        }
     }
     
     private func display(_ itemID:Int){
@@ -49,7 +55,7 @@ class DetailViewController: UIViewController {
         //TODO:display image getting from maskdomain
         let imgPathFromSandBox:String = getImageFromSandBox(fileName:item?.image ?? "jodan.jpg")
         let img: UIImage = UIImage(contentsOfFile: imgPathFromSandBox)!
-        //let img: UIImage = UIImage(named: item?.image ?? "jodan.jpg")!
+        //let img: UIImage = UIImage(named: item?.image ?? "no.jpg")!
         image.image = img
     }
     

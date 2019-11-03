@@ -13,6 +13,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     @IBOutlet weak var itemTableView: UITableView!
     
+    //var delegate:ItemTableViewDelegate
+    
     //protocal stubs
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemList.count //TODO
@@ -46,6 +48,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         wirteData()
         saveImageToSandBox()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("list view will appear")
+        itemTableView.reloadData()
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let detailSegueTo = segue.destination as? DetailViewController{
@@ -53,11 +60,13 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             let button = sender as? UIButton
             let index = button!.tag
             detailSegueTo.itemID = index
+            detailSegueTo.segueSource = "list"
         }
     }
     
     
 }
+
 
 
 

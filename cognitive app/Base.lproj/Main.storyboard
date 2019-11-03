@@ -17,7 +17,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="I0N-ya-6oo">
                                 <rect key="frame" x="20" y="108" width="335" height="605"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="69" id="sgq-XV-xxy" customClass="TableViewCell" customModule="cognitive_app" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="335" height="69"/>
@@ -40,20 +40,23 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jodan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laf-3W-aJa">
                                                             <rect key="frame" x="0.0" y="0.0" width="67" height="30"/>
+                                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="===&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iam-d4-FmF">
                                                             <rect key="frame" x="67" y="0.0" width="42.666666666666657" height="30"/>
+                                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="乔丹" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfC-T1-pbi">
                                                             <rect key="frame" x="109.66666666666667" y="0.0" width="50.666666666666671" height="30"/>
+                                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -64,6 +67,7 @@
                                                 <constraint firstItem="dbz-mF-vCa" firstAttribute="leading" secondItem="ejt-1P-j2q" secondAttribute="leading" constant="10" id="mVE-9c-sKm"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="KMZ-eI-dql" firstAttribute="centerY" secondItem="sgq-XV-xxy" secondAttribute="centerY" id="3ox-Fi-C1t"/>
                                             <constraint firstAttribute="trailing" secondItem="KMZ-eI-dql" secondAttribute="trailing" constant="20" id="SrV-Pd-d7p"/>
@@ -85,9 +89,12 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="Take a photo and use cognitive service"/>
+                                <connections>
+                                    <segue destination="ra4-vh-Uen" kind="show" identifier="takePhotoSegue" id="bAn-5b-cDH"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="I0N-ya-6oo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0hV-XL-6pp"/>
                             <constraint firstItem="UZw-wv-xZi" firstAttribute="top" secondItem="I0N-ya-6oo" secondAttribute="bottom" constant="20" id="6Gp-Ux-xzp"/>
@@ -129,7 +136,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="certain text cognitived" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbK-ET-v61">
                                                 <rect key="frame" x="0.0" y="0.0" width="268" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l29-IH-b2Q">
@@ -153,7 +160,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="===&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3V-Io-qO9">
                                                 <rect key="frame" x="0.0" y="5" width="335" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -167,7 +174,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="被翻译成的中文" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcp-Dz-cjs">
                                                 <rect key="frame" x="0.0" y="0.0" width="268" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIy-G1-yoc">
@@ -188,7 +195,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="SsQ-d6-SV4" firstAttribute="trailing" secondItem="Ila-XB-Brc" secondAttribute="trailing" constant="20" id="U2z-ni-3fP"/>
                             <constraint firstItem="Ila-XB-Brc" firstAttribute="leading" secondItem="SsQ-d6-SV4" secondAttribute="leading" constant="20" id="WpU-HL-e1q"/>
@@ -209,7 +216,53 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2oN-ZA-ZGj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1165.217391304348" y="22.767857142857142"/>
+            <point key="canvasLocation" x="1966" y="59"/>
+        </scene>
+        <!--Take Photo View Controller-->
+        <scene sceneID="cPd-3h-xbG">
+            <objects>
+                <viewController id="ra4-vh-Uen" customClass="TakePhotoViewController" customModule="cognitive_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="utX-Ug-26A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rki-Rk-z8Q">
+                                <rect key="frame" x="155" y="663" width="65" height="65"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="TfN-6d-yoo"/>
+                                    <constraint firstAttribute="height" constant="65" id="u9N-aE-xJ6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Shutter">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="takePhoto:" destination="ra4-vh-Uen" eventType="touchUpInside" id="N95-5K-JHB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MHh-OQ-Kbh" firstAttribute="bottom" secondItem="rki-Rk-z8Q" secondAttribute="bottom" constant="50" id="2kU-kv-OKv"/>
+                            <constraint firstItem="MHh-OQ-Kbh" firstAttribute="bottom" secondItem="rki-Rk-z8Q" secondAttribute="bottom" constant="50" id="R9S-RW-KSE"/>
+                            <constraint firstItem="rki-Rk-z8Q" firstAttribute="centerX" secondItem="utX-Ug-26A" secondAttribute="centerX" id="gLC-Mb-jL4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MHh-OQ-Kbh"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8qB-hr-nUe"/>
+                    <connections>
+                        <segue destination="tkf-eL-3w9" kind="show" identifier="displayDetailSegue" id="MGH-ht-bAz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iqb-El-deP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044" y="878"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jmh-fU-ZfM">
@@ -233,4 +286,7 @@
     <resources>
         <image name="jodan" width="408" height="600"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="MGH-ht-bAz"/>
+    </inferredMetricsTieBreakers>
 </document>
