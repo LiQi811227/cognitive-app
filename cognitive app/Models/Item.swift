@@ -9,11 +9,11 @@
 import Foundation
 
 struct Item:Codable {
-    let id:Int
-    let date:Date
-    let image:String
-    let wordFrom:String
-    let wordTo:String
-    let soundFrom:String
-    let soundTo:String
+    var id:Int
+    var date:Date
+    var image:String
+    var wordFrom:String
+    var wordTo:String
+    var soundFrom:String
+    var soundTo:String
 }

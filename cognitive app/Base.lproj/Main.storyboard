@@ -207,7 +207,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SsQ-d6-SV4"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Detail" largeTitleDisplayMode="always" id="DhF-1l-d7L"/>
+                    <navigationItem key="navigationItem" title="Detail" largeTitleDisplayMode="always" id="DhF-1l-d7L">
+                        <barButtonItem key="backBarButtonItem" title="list" id="rD5-cF-u92"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="image" destination="BWj-UO-tcu" id="86f-J0-qlu"/>
                         <outlet property="wordFrom" destination="WbK-ET-v61" id="RWZ-Ny-swG"/>
