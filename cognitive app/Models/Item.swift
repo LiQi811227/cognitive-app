@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Item {
+struct Item:Codable {
     let id:Int
     let date:Date
     let image:String

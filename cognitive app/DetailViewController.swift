@@ -36,12 +36,20 @@ class DetailViewController: UIViewController {
     }
     
     private func display(_ itemID:Int){
-        let item = itemList.first(where:{$0.id==itemID})
+        
+        let itemList:[Item]? = readData() as? [Item]
+        
+        let item = itemList?.first(where:{$0.id==itemID})
+        
+        print(item ?? "nothing getted.")
+        
         wordFrom.text = item?.wordFrom
         wordTo.text = item?.wordTo
         
-        //TODO:display image getted from localstorage
-        let img: UIImage = UIImage(named: item?.image ?? "jodan.jpg")!
+        //TODO:display image getting from maskdomain
+        let imgPathFromSandBox:String = getImageFromSandBox(fileName:item?.image ?? "jodan.jpg")
+        let img: UIImage = UIImage(contentsOfFile: imgPathFromSandBox)!
+        //let img: UIImage = UIImage(named: item?.image ?? "jodan.jpg")!
         image.image = img
     }
     

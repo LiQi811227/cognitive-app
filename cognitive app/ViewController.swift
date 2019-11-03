@@ -41,6 +41,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
          
         itemTableView.delegate = self
         itemTableView.dataSource = self
+        
+        //TODO：initialize data(images and items)
+        wirteData()
+        saveImageToSandBox()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -51,5 +55,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             detailSegueTo.itemID = index
         }
     }
+    
+    
 }
+
+
 
