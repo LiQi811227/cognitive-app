@@ -16,11 +16,11 @@ class DetailViewController: UIViewController {
     
     //speech action
     @IBAction func speechAction(_ sender: UIButton) {
-        speech(wordFrom.text)
+        speech(wordFrom.text ?? "not sure","from")
     }
     
     @IBAction func speechAction2(_ sender: UIButton) {
-        speech(wordTo.text)
+        speech(wordTo.text ?? "神马东东啊，俺不会念","to")
     }
     
     var segueSource:String = "list"
@@ -59,11 +59,11 @@ class DetailViewController: UIViewController {
         image.image = img
     }
     
-    private func speech(_ text:String?){
-        if let textForSpeech = text{
-            //TODO:call remote api
-            //TODO:call AVPlay
-            print(textForSpeech)
-        }
-    }
+//    private func speech(_ text:String?){
+//        if let textForSpeech = text{
+//            //TODO:call remote api
+//            //TODO:call AVPlay
+//            print(textForSpeech)
+//        }
+//    }
 }
