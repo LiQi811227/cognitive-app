@@ -259,6 +259,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="8qB-hr-nUe"/>
                     <connections>
+                        <outlet property="shutter" destination="rki-Rk-z8Q" id="ayn-u5-18k"/>
                         <segue destination="tkf-eL-3w9" kind="show" identifier="displayDetailSegue" id="MGH-ht-bAz"/>
                     </connections>
                 </viewController>

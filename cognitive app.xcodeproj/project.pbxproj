@@ -17,6 +17,9 @@
 		4E6272E7236D82BA00B9D986 /* cognitive_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6272E6236D82BA00B9D986 /* cognitive_appUITests.swift */; };
 		4E8231BA236EB30F001CD6C8 /* TakePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8231B9236EB30F001CD6C8 /* TakePhotoViewController.swift */; };
 		4E8231BC236ED864001CD6C8 /* DescribeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8231BB236ED864001CD6C8 /* DescribeImage.swift */; };
+		4E8231BE236F8AFC001CD6C8 /* memo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4E8231BD236F8AFC001CD6C8 /* memo.txt */; };
+		4E8231C0236F8DB9001CD6C8 /* RemoteCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8231BF236F8DB9001CD6C8 /* RemoteCall.swift */; };
+		4E8231C2236F9FF0001CD6C8 /* TranslateWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8231C1236F9FF0001CD6C8 /* TranslateWord.swift */; };
 		4EEE35DB236E1BDD00389628 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEE35DA236E1BDD00389628 /* Item.swift */; };
 		4EEE35DE236E1DF400389628 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEE35DD236E1DF400389628 /* Items.swift */; };
 		4EEE35E0236E208400389628 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEE35DF236E208400389628 /* TableViewCell.swift */; };
@@ -58,6 +61,9 @@
 		4E6272E8236D82BA00B9D986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E8231B9236EB30F001CD6C8 /* TakePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhotoViewController.swift; sourceTree = "<group>"; };
 		4E8231BB236ED864001CD6C8 /* DescribeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescribeImage.swift; sourceTree = "<group>"; };
+		4E8231BD236F8AFC001CD6C8 /* memo.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = memo.txt; sourceTree = "<group>"; };
+		4E8231BF236F8DB9001CD6C8 /* RemoteCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCall.swift; sourceTree = "<group>"; };
+		4E8231C1236F9FF0001CD6C8 /* TranslateWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateWord.swift; sourceTree = "<group>"; };
 		4EEE35DA236E1BDD00389628 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		4EEE35DD236E1DF400389628 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		4EEE35DF236E208400389628 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -128,6 +134,7 @@
 				4E6272D2236D82BA00B9D986 /* Info.plist */,
 				4EEE35E1236E295D00389628 /* DetailViewController.swift */,
 				4E8231B9236EB30F001CD6C8 /* TakePhotoViewController.swift */,
+				4E8231BD236F8AFC001CD6C8 /* memo.txt */,
 			);
 			path = "cognitive app";
 			sourceTree = "<group>";
@@ -162,6 +169,7 @@
 			children = (
 				4EEE35DA236E1BDD00389628 /* Item.swift */,
 				4E8231BB236ED864001CD6C8 /* DescribeImage.swift */,
+				4E8231C1236F9FF0001CD6C8 /* TranslateWord.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -170,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				4EEE35E3236E4D6000389628 /* global.swift */,
+				4E8231BF236F8DB9001CD6C8 /* RemoteCall.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -293,6 +302,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E8231BE236F8AFC001CD6C8 /* memo.txt in Resources */,
 				4E6272D1236D82BA00B9D986 /* LaunchScreen.storyboard in Resources */,
 				4E6272CE236D82BA00B9D986 /* Assets.xcassets in Resources */,
 				4E6272CC236D82B900B9D986 /* Main.storyboard in Resources */,
@@ -324,9 +334,11 @@
 				4EEE35DB236E1BDD00389628 /* Item.swift in Sources */,
 				4E8231BC236ED864001CD6C8 /* DescribeImage.swift in Sources */,
 				4EEE35DE236E1DF400389628 /* Items.swift in Sources */,
+				4E8231C0236F8DB9001CD6C8 /* RemoteCall.swift in Sources */,
 				4E6272C9236D82B900B9D986 /* ViewController.swift in Sources */,
 				4E8231BA236EB30F001CD6C8 /* TakePhotoViewController.swift in Sources */,
 				4EEE35E0236E208400389628 /* TableViewCell.swift in Sources */,
+				4E8231C2236F9FF0001CD6C8 /* TranslateWord.swift in Sources */,
 				4E6272C5236D82B900B9D986 /* AppDelegate.swift in Sources */,
 				4E6272C7236D82B900B9D986 /* SceneDelegate.swift in Sources */,
 				4EEE35E2236E295D00389628 /* DetailViewController.swift in Sources */,

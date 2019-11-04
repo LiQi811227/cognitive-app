@@ -23,6 +23,7 @@ class TakePhotoViewController: UIViewController {
     var wordTo:String?
     
     
+    @IBOutlet weak var shutter: UIButton!
     
     @IBAction func takePhoto(_ sender: Any) {
         //get the photo
@@ -43,62 +44,12 @@ class TakePhotoViewController: UIViewController {
     private func getTag(selectedImage: UIImage?) {
         guard let selectedImage = selectedImage else { return}
         
-        wordFrom = "teststuff" //TODO:It needs to be getten from remote api calling
-        wordTo = "测试物体" //TODO:It needs to be getten from remote api calling
-        
-        self.storeInfo()
+        //TODO: test remote call
+        imageCognitive(image:selectedImage)
         
         
         
-        self.performSegue(withIdentifier: "displayDetailSegue", sender: nil)
-        
-//        // URL for cognitive services tag API
-//        guard let url = URL(string: "https://unitec-computer-vision.cognitiveservices.azure.com/vision/v1.0/describe") else { return}
-//
-//        // API request
-//        let cognitivesServicesAPIKey = "c447add6f4234b4abd9c6496dfb5c2b4"
-//        var request = URLRequest(url: url)
-//        request.httpMethod = "POST"
-//        request.setValue("application/octet-stream", forHTTPHeaderField: "Content-Type")
-//        request.setValue(cognitivesServicesAPIKey, forHTTPHeaderField: "Ocp-Apim-Subscription-Key")
-//        request.httpBody = selectedImage.jpegData(compressionQuality: 1)
-//
-//        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-//            guard let data = data, let response = response as? HTTPURLResponse else { return }
-//
-//            if response.statusCode == 200 {
-////                let responseString = String(data: data, encoding: .utf8)
-//                let describeImage = try? JSONDecoder().decode(DescribeImage.self, from: data)
-//                guard let captions = describeImage?.description?.captions else { return }
-//                DispatchQueue.main.async {
-//                    if captions.count > 0 {
-//                        self.wordFrom = captions[0].text!
-//                        self.wordTo = self.getTranslate(captions[0].text!)
-//                    } else {
-//                        self.wordFrom = "LiQi: No captions available"
-//                        self.wordTo = self.getTranslate("LiQi: No captions available")
-//                    }
-//                    //
-//                    self.storeInfo()
-//                    //go to detail page
-//                    self.performSegue(withIdentifier: "displayDetailSegue", sender: nil)
-//                }
-//            } else {
-//                DispatchQueue.main.async {
-//                    self.wordFrom = "LiQi: No captions available"
-//                    self.wordTo = self.getTranslate(error?.localizedDescription ?? "LiQi: Invalid response.")
-//                    //
-//                    self.storeInfo()
-//                    //go to detail page
-//                    self.performSegue(withIdentifier: "displayDetailSegue", sender: nil)
-//                }
-//            }
-//        }
-//
-//
-//
-//        // Resume task
-//        task.resume()
+
     }
     
     //Store the newItem into localstorage
@@ -110,12 +61,7 @@ class TakePhotoViewController: UIViewController {
         saveImageToSandBox(imageName,imageTook!)
     }
     
-    //TODO: calling translate cognitive api
-    private func getTranslate(_ wordFrom: String)->String {
-            var wordTo = "临时翻译"
-        
-            return wordTo
-        }
+    
 
     func setupCaptureSession(){
         captureSession.sessionPreset = AVCaptureSession.Preset.photo
@@ -177,8 +123,215 @@ class TakePhotoViewController: UIViewController {
             detailSegueTo.segueSource = "takephoto"
         }
     }
+    
+    let progressView = UIProgressView(progressViewStyle: UIProgressView.Style.default)
+    
+    func imageCognitive(image:UIImage){
+                // URL for cognitive services tag API
+                guard let url = URL(string: "https://image-cognitive.cognitiveservices.azure.com/vision/v2.1/analyze?visualFeatures=Categories,Description,Color") else { return }
+        
+                // API request
+                let cognitivesServicesAPIKey = "b3363696b59440119742b10ae102a8a3"
+                var request = URLRequest(url: url)
+                request.httpMethod = "POST"
+                request.setValue("application/octet-stream", forHTTPHeaderField: "Content-Type")
+                request.setValue(cognitivesServicesAPIKey, forHTTPHeaderField: "Ocp-Apim-Subscription-Key")
+                request.httpBody = image.jpegData(compressionQuality: 1)
+        
+                var returnString:String = ""
+        
+                //Progress bar start
+                shutter.isEnabled = false
+                self.view.backgroundColor = UIColor.gray
+                progressView.frame = CGRect.init(x: 0, y: 0, width: self.view.bounds.size.width-20, height: 30)
+                progressView.layer.position = CGPoint(x: self.view.frame.width/2, y: 100)
+                //let progressView = UIProgressView(progressViewStyle: UIProgressView.Style.default)
+                progressView.center = self.view.center;
+                progressView.progress = 0.1
+                self.view.addSubview(progressView)
+                progressView.setProgress(0.5, animated: true)
+                progressView.progressTintColor = UIColor.orange//已有进度颜色
+                progressView.trackTintColor = UIColor.black//剩余进度颜色
+                progressView.observedProgress = Progress.current()
+        
+                let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                    guard let data = data, let response = response as? HTTPURLResponse else { return }
+        
+                    if response.statusCode == 200 {
+                        //let responseString = String(data: data, encoding: .utf8)
+                        let describeImage = try? JSONDecoder().decode(DescribeImage.self, from: data)
+                        guard let tags = describeImage?.description?.tags else { return }
+                        DispatchQueue.main.async {
+                            if tags.count > 0 {
+                                returnString = tags[0]
+                                self.wordFrom = returnString
+                                self.translate(returnString, "zh-Hans")
+                            } else {
+                                returnString =  "LiQi: No captions available"
+                                self.wordFrom = returnString
+                                self.translate(returnString, "zh-Hans")
+                            }
+                        }
+                    } else {
+                        DispatchQueue.main.async {
+                            returnString = "LiQi: No captions available"
+                            self.wordFrom = returnString
+                            self.translate(returnString, "zh-Hans")
+                        }
+                    }
+                }
+                // Resume task
+                task.resume()
+    }
+    
+    
+//    func parseJson(jsonData: Data) {
+//
+//        //*****TRANSLATION RETURNED DATA*****
+//        struct ReturnedJson: Codable {
+//            var translations: [TranslatedStrings]
+//        }
+//        struct TranslatedStrings: Codable {
+//            var text: String
+//            var to: String
+//        }
+//
+//        let jsonDecoder = JSONDecoder()
+//        //print(String(data: jsonData, encoding: .utf8))
+//        let translateWord = try? jsonDecoder.decode(Array<ReturnedJson>.self, from: jsonData)
+//        //let translateWord = try? jsonDecoder.decode(Array<ReturnedJson>.self, from: jsonData)
+//        let translations = translateWord?[0].translations
+//        print(translations)
+//
+//        //Put response on main thread to update UI
+//        DispatchQueue.main.async {
+//            self.wordTo = translations![0].text
+//            self.wordTo="没找到合适的翻译"
+//        }
+//    }
+    
+    func translate(_ text: String, _ lang: String) {
+        getToken("") { (data, response, error) in
+            guard let data = data, let token = NSString(data: data, encoding: String.Encoding.utf8.rawValue) as String? else {return}
+
+            msTranslate(token, translate: text, toLang: lang) { (data, response,error) in
+                guard let data = data,
+                    let result = try? extract(data) else {
+                    return
+                }
+                self.wordTo = result
+                self.storeInfo()
+                DispatchQueue.main.sync {
+                    self.performSegue(withIdentifier: "displayDetailSegue", sender: nil)
+                }
+                
+            }
+        }
+    }
+    
+    private func getTranslate(_ wordFrom: String){
+        
+        //wordTo = "没找到合适的翻译"
+        //translate(wordFrom, "ja")
+        
+        
+        
+        
+//        let azureKey = "13d4e880fd4f4858b47e226d4fd5912b"
+//        //let contentType = "application/json"
+//        let traceID = "179543b0-5927-41ab-81e3-bfb537627499"
+//        let host = "translate-fromto.cognitiveservices.azure.com"
+//        let apiURL = "https://translate-fromto.cognitiveservices.azure.com/sts/v1.0/issuetoken?api-version=3.0&from=en&to=ja"
+//
+//        var wordFroms = [WordFrom]()
+//        var wordFromInner = WordFrom()
+//        wordFromInner.text = wordFrom
+//        wordFroms.append(wordFromInner)
+//
+//        let jsonToTranslate = try? JSONEncoder().encode(wordFroms)
+//        let url = URL(string: apiURL)
+//        var request = URLRequest(url: url!)
+//
+//        request.httpMethod = "POST"
+//        request.addValue(azureKey, forHTTPHeaderField: "Ocp-Apim-Subscription-Key")
+//        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+//        request.addValue(traceID, forHTTPHeaderField: "X-ClientTraceID")
+//        request.addValue(host, forHTTPHeaderField: "Host")
+//        request.addValue(String(describing: jsonToTranslate?.count), forHTTPHeaderField: "Content-Length")
+//        request.httpBody = jsonToTranslate
+//
+//        let config = URLSessionConfiguration.default
+//        let session =  URLSession(configuration: config)
+//
+//        let task = session.dataTask(with: request) { (responseData, response, responseError) in
+//
+//            if responseError != nil {
+//                print("this is the error ", responseError!)
+//
+//                let alert = UIAlertController(title: "Could not connect to service", message: "Please check your network connection and try again", preferredStyle: .actionSheet)
+//
+//                alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+//
+//                self.present(alert, animated: true)
+//
+//            }
+//            print("*****")
+//            self.parseJson(jsonData: responseData!)
+//        }
+//        task.resume()
+        
+        
+        
+//        //self.wordTo = "测试物体"
+//
+//        // URL for cognitive services tag API
+//        guard let url = URL(string: "https://translate-fromto.cognitiveservices.azure.com/sts/v1.0/issuetoken/translate?api-version=1.0&to=ja") else { return }
+//
+//        // API request
+//        let cognitivesServicesAPIKey = "13d4e880fd4f4858b47e226d4fd5912b"
+//        var request = URLRequest(url: url)
+//        request.httpMethod = "POST"
+//        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+//        request.setValue(cognitivesServicesAPIKey, forHTTPHeaderField: "Ocp-Apim-Subscription-Key")
+//        request.httpBody = "{'Text':‘\(wordFrom)’}".data(using: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!
+//
+//        var returnString:String = ""
+//        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+//            guard let data = data, let response = response as? HTTPURLResponse else { return }
+//
+//            if response.statusCode == 200 {
+//                let translateWord = try? JSONDecoder().decode(TranslateWord.self, from: data)
+//                guard let translations = translateWord?.translations else { return }
+//                DispatchQueue.main.async {
+//                    if translations.count > 0 {
+//                        returnString = translations[0].text!
+//                        self.wordTo = returnString
+//                        self.storeInfo()
+//                        self.performSegue(withIdentifier: "displayDetailSegue", sender: nil)
+//                    } else {
+//                        returnString = "LiQi: 找不到合适的翻译"
+//                        self.wordTo = returnString
+//                        self.storeInfo()
+//                        self.performSegue(withIdentifier: "displayDetailSegue", sender: nil)
+//                    }
+//                }
+//            } else {
+//                DispatchQueue.main.async {
+//                    returnString = "LiQi: 找不到合适的翻译"
+//                    self.wordTo = returnString
+//                    self.storeInfo()
+//                    self.performSegue(withIdentifier: "displayDetailSegue", sender: nil)
+//                }
+//            }
+//        }
+//        // Resume task
+//        task.resume()
+    }
 
 }
+
+ 
+
 
 
 extension TakePhotoViewController:AVCapturePhotoCaptureDelegate{
