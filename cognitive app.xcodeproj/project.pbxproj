@@ -14,13 +14,12 @@
 		4E6272CC236D82B900B9D986 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E6272CA236D82B900B9D986 /* Main.storyboard */; };
 		4E6272CE236D82BA00B9D986 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E6272CD236D82BA00B9D986 /* Assets.xcassets */; };
 		4E6272D1236D82BA00B9D986 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E6272CF236D82BA00B9D986 /* LaunchScreen.storyboard */; };
-		4E6272DC236D82BA00B9D986 /* cognitive_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6272DB236D82BA00B9D986 /* cognitive_appTests.swift */; };
-		4E6272E7236D82BA00B9D986 /* cognitive_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6272E6236D82BA00B9D986 /* cognitive_appUITests.swift */; };
 		4E8231BA236EB30F001CD6C8 /* TakePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8231B9236EB30F001CD6C8 /* TakePhotoViewController.swift */; };
 		4E8231BC236ED864001CD6C8 /* DescribeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8231BB236ED864001CD6C8 /* DescribeImage.swift */; };
 		4E8231BE236F8AFC001CD6C8 /* memo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4E8231BD236F8AFC001CD6C8 /* memo.txt */; };
 		4E8231C0236F8DB9001CD6C8 /* RemoteCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8231BF236F8DB9001CD6C8 /* RemoteCall.swift */; };
 		4E8231C2236F9FF0001CD6C8 /* TranslateWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8231C1236F9FF0001CD6C8 /* TranslateWord.swift */; };
+		4ED0DF5623756C6E004EFB8C /* cognitive_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED0DF5523756C6E004EFB8C /* cognitive_appTests.swift */; };
 		4EEE35DB236E1BDD00389628 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEE35DA236E1BDD00389628 /* Item.swift */; };
 		4EEE35DE236E1DF400389628 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEE35DD236E1DF400389628 /* Items.swift */; };
 		4EEE35E0236E208400389628 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEE35DF236E208400389628 /* TableViewCell.swift */; };
@@ -29,14 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4E6272D8236D82BA00B9D986 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4E6272B9236D82B800B9D986 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4E6272C0236D82B800B9D986;
-			remoteInfo = "cognitive app";
-		};
-		4E6272E3236D82BA00B9D986 /* PBXContainerItemProxy */ = {
+		4ED0DF5823756C6E004EFB8C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4E6272B9236D82B800B9D986 /* Project object */;
 			proxyType = 1;
@@ -55,17 +47,14 @@
 		4E6272CD236D82BA00B9D986 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E6272D0236D82BA00B9D986 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E6272D2236D82BA00B9D986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E6272D7236D82BA00B9D986 /* cognitive appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "cognitive appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E6272DB236D82BA00B9D986 /* cognitive_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cognitive_appTests.swift; sourceTree = "<group>"; };
-		4E6272DD236D82BA00B9D986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E6272E2236D82BA00B9D986 /* cognitive appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "cognitive appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E6272E6236D82BA00B9D986 /* cognitive_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cognitive_appUITests.swift; sourceTree = "<group>"; };
-		4E6272E8236D82BA00B9D986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E8231B9236EB30F001CD6C8 /* TakePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhotoViewController.swift; sourceTree = "<group>"; };
 		4E8231BB236ED864001CD6C8 /* DescribeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescribeImage.swift; sourceTree = "<group>"; };
 		4E8231BD236F8AFC001CD6C8 /* memo.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = memo.txt; sourceTree = "<group>"; };
 		4E8231BF236F8DB9001CD6C8 /* RemoteCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCall.swift; sourceTree = "<group>"; };
 		4E8231C1236F9FF0001CD6C8 /* TranslateWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateWord.swift; sourceTree = "<group>"; };
+		4ED0DF5323756C6E004EFB8C /* cognitive appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "cognitive appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4ED0DF5523756C6E004EFB8C /* cognitive_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cognitive_appTests.swift; sourceTree = "<group>"; };
+		4ED0DF5723756C6E004EFB8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EEE35DA236E1BDD00389628 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		4EEE35DD236E1DF400389628 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		4EEE35DF236E208400389628 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -81,14 +70,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E6272D4236D82BA00B9D986 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4E6272DF236D82BA00B9D986 /* Frameworks */ = {
+		4ED0DF5023756C6E004EFB8C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -102,8 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				4E6272C3236D82B900B9D986 /* cognitive app */,
-				4E6272DA236D82BA00B9D986 /* cognitive appTests */,
-				4E6272E5236D82BA00B9D986 /* cognitive appUITests */,
+				4ED0DF5423756C6E004EFB8C /* cognitive appTests */,
 				4E6272C2236D82B900B9D986 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,8 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				4E6272C1236D82B900B9D986 /* cognitive app.app */,
-				4E6272D7236D82BA00B9D986 /* cognitive appTests.xctest */,
-				4E6272E2236D82BA00B9D986 /* cognitive appUITests.xctest */,
+				4ED0DF5323756C6E004EFB8C /* cognitive appTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,24 +121,6 @@
 			path = "cognitive app";
 			sourceTree = "<group>";
 		};
-		4E6272DA236D82BA00B9D986 /* cognitive appTests */ = {
-			isa = PBXGroup;
-			children = (
-				4E6272DB236D82BA00B9D986 /* cognitive_appTests.swift */,
-				4E6272DD236D82BA00B9D986 /* Info.plist */,
-			);
-			path = "cognitive appTests";
-			sourceTree = "<group>";
-		};
-		4E6272E5236D82BA00B9D986 /* cognitive appUITests */ = {
-			isa = PBXGroup;
-			children = (
-				4E6272E6236D82BA00B9D986 /* cognitive_appUITests.swift */,
-				4E6272E8236D82BA00B9D986 /* Info.plist */,
-			);
-			path = "cognitive appUITests";
-			sourceTree = "<group>";
-		};
 		4E6272F4236D96EC00B9D986 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +146,15 @@
 				4E43BD1D23703828009D39FE /* speech.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		4ED0DF5423756C6E004EFB8C /* cognitive appTests */ = {
+			isa = PBXGroup;
+			children = (
+				4ED0DF5523756C6E004EFB8C /* cognitive_appTests.swift */,
+				4ED0DF5723756C6E004EFB8C /* Info.plist */,
+			);
+			path = "cognitive appTests";
 			sourceTree = "<group>";
 		};
 		4EEE35D9236E17E900389628 /* Protocols */ = {
@@ -221,41 +192,23 @@
 			productReference = 4E6272C1236D82B900B9D986 /* cognitive app.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4E6272D6236D82BA00B9D986 /* cognitive appTests */ = {
+		4ED0DF5223756C6E004EFB8C /* cognitive appTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4E6272EE236D82BA00B9D986 /* Build configuration list for PBXNativeTarget "cognitive appTests" */;
+			buildConfigurationList = 4ED0DF5A23756C6E004EFB8C /* Build configuration list for PBXNativeTarget "cognitive appTests" */;
 			buildPhases = (
-				4E6272D3236D82BA00B9D986 /* Sources */,
-				4E6272D4236D82BA00B9D986 /* Frameworks */,
-				4E6272D5236D82BA00B9D986 /* Resources */,
+				4ED0DF4F23756C6E004EFB8C /* Sources */,
+				4ED0DF5023756C6E004EFB8C /* Frameworks */,
+				4ED0DF5123756C6E004EFB8C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4E6272D9236D82BA00B9D986 /* PBXTargetDependency */,
+				4ED0DF5923756C6E004EFB8C /* PBXTargetDependency */,
 			);
 			name = "cognitive appTests";
 			productName = "cognitive appTests";
-			productReference = 4E6272D7236D82BA00B9D986 /* cognitive appTests.xctest */;
+			productReference = 4ED0DF5323756C6E004EFB8C /* cognitive appTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		4E6272E1236D82BA00B9D986 /* cognitive appUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4E6272F1236D82BA00B9D986 /* Build configuration list for PBXNativeTarget "cognitive appUITests" */;
-			buildPhases = (
-				4E6272DE236D82BA00B9D986 /* Sources */,
-				4E6272DF236D82BA00B9D986 /* Frameworks */,
-				4E6272E0236D82BA00B9D986 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4E6272E4236D82BA00B9D986 /* PBXTargetDependency */,
-			);
-			name = "cognitive appUITests";
-			productName = "cognitive appUITests";
-			productReference = 4E6272E2236D82BA00B9D986 /* cognitive appUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -270,11 +223,7 @@
 					4E6272C0236D82B800B9D986 = {
 						CreatedOnToolsVersion = 11.2;
 					};
-					4E6272D6236D82BA00B9D986 = {
-						CreatedOnToolsVersion = 11.2;
-						TestTargetID = 4E6272C0236D82B800B9D986;
-					};
-					4E6272E1236D82BA00B9D986 = {
+					4ED0DF5223756C6E004EFB8C = {
 						CreatedOnToolsVersion = 11.2;
 						TestTargetID = 4E6272C0236D82B800B9D986;
 					};
@@ -294,8 +243,7 @@
 			projectRoot = "";
 			targets = (
 				4E6272C0236D82B800B9D986 /* cognitive app */,
-				4E6272D6236D82BA00B9D986 /* cognitive appTests */,
-				4E6272E1236D82BA00B9D986 /* cognitive appUITests */,
+				4ED0DF5223756C6E004EFB8C /* cognitive appTests */,
 			);
 		};
 /* End PBXProject section */
@@ -312,14 +260,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E6272D5236D82BA00B9D986 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4E6272E0236D82BA00B9D986 /* Resources */ = {
+		4ED0DF5123756C6E004EFB8C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -349,34 +290,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E6272D3236D82BA00B9D986 /* Sources */ = {
+		4ED0DF4F23756C6E004EFB8C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E6272DC236D82BA00B9D986 /* cognitive_appTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4E6272DE236D82BA00B9D986 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4E6272E7236D82BA00B9D986 /* cognitive_appUITests.swift in Sources */,
+				4ED0DF5623756C6E004EFB8C /* cognitive_appTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4E6272D9236D82BA00B9D986 /* PBXTargetDependency */ = {
+		4ED0DF5923756C6E004EFB8C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4E6272C0236D82B800B9D986 /* cognitive app */;
-			targetProxy = 4E6272D8236D82BA00B9D986 /* PBXContainerItemProxy */;
-		};
-		4E6272E4236D82BA00B9D986 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4E6272C0236D82B800B9D986 /* cognitive app */;
-			targetProxy = 4E6272E3236D82BA00B9D986 /* PBXContainerItemProxy */;
+			targetProxy = 4ED0DF5823756C6E004EFB8C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -552,15 +480,13 @@
 			};
 			name = Release;
 		};
-		4E6272EF236D82BA00B9D986 /* Debug */ = {
+		4ED0DF5B23756C6E004EFB8C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K5X9GMF6Y5;
 				INFOPLIST_FILE = "cognitive appTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -574,15 +500,13 @@
 			};
 			name = Debug;
 		};
-		4E6272F0236D82BA00B9D986 /* Release */ = {
+		4ED0DF5C23756C6E004EFB8C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K5X9GMF6Y5;
 				INFOPLIST_FILE = "cognitive appTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -593,46 +517,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cognitive app.app/cognitive app";
-			};
-			name = Release;
-		};
-		4E6272F2236D82BA00B9D986 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K5X9GMF6Y5;
-				INFOPLIST_FILE = "cognitive appUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "liqi.cognitive-appUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "cognitive app";
-			};
-			name = Debug;
-		};
-		4E6272F3236D82BA00B9D986 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K5X9GMF6Y5;
-				INFOPLIST_FILE = "cognitive appUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "liqi.cognitive-appUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "cognitive app";
 			};
 			name = Release;
 		};
@@ -657,20 +541,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4E6272EE236D82BA00B9D986 /* Build configuration list for PBXNativeTarget "cognitive appTests" */ = {
+		4ED0DF5A23756C6E004EFB8C /* Build configuration list for PBXNativeTarget "cognitive appTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4E6272EF236D82BA00B9D986 /* Debug */,
-				4E6272F0236D82BA00B9D986 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4E6272F1236D82BA00B9D986 /* Build configuration list for PBXNativeTarget "cognitive appUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4E6272F2236D82BA00B9D986 /* Debug */,
-				4E6272F3236D82BA00B9D986 /* Release */,
+				4ED0DF5B23756C6E004EFB8C /* Debug */,
+				4ED0DF5C23756C6E004EFB8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

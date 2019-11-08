@@ -17,7 +17,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     //protocal stubs
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itemList.count //TODO
+        return itemList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -44,7 +44,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         itemTableView.delegate = self
         itemTableView.dataSource = self
         
-        //TODO：initialize data(images and items)
         wirteData()
         saveImageToSandBox()
     }
