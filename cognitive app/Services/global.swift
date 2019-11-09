@@ -19,6 +19,7 @@ let propertyListEncoder = PropertyListEncoder()
 public var encodedItems:(Any)? = nil
 public func wirteData(){
 //    let propertyListEncoder = PropertyListEncoder()
+    print("--------writeData----------")
     if let encodedItemList = try? propertyListEncoder.encode(itemList) {
         
         try? encodedItemList.write(to: archiveURL,options: .noFileProtection)
@@ -28,14 +29,19 @@ public func wirteData(){
     }
 }
 
+public func clearData(){
+    print("--------clearData----------")
+    do {
+        if FileManager.default.fileExists(atPath: archiveURL.path) {
+            try FileManager.default.removeItem(atPath: archiveURL.path)
+        }
+    } catch {
+        print(error)
+    }
+}
 
 public func readData()->Any?{
     let propertyListDecoder = PropertyListDecoder()
-//    if let decodedItemList = try?
-//        propertyListDecoder.decode([Item].self, from: encodedItems as! Data) {
-//        //print(decodedItemList)
-//        return decodedItemList
-//    }
     
     if let decodedItemList = try?
         propertyListDecoder.decode([Item].self, from:try! Data(contentsOf: archiveURL)) {
@@ -61,7 +67,7 @@ public func saveImageToSandBox(){
     for item in itemList {
         imgName = item.image
         let imgTmp: UIImage = UIImage(named: imgName)!
-        if let imageData = imgTmp.jpegData(compressionQuality: 1) as NSData? {
+        if let imageData = imgTmp.jpegData(compressionQuality: 0.2) as NSData? {
             let imgPath = fullPath.appending(imgName)
             imageData.write(toFile: imgPath, atomically: true)
             print("imgPath=\(imgPath)")
@@ -70,7 +76,7 @@ public func saveImageToSandBox(){
 }
 
 public func saveImageToSandBox(_ imgName:String, _ image:UIImage){
-    if let imageData = image.jpegData(compressionQuality: 1) as NSData? {
+    if let imageData = image.jpegData(compressionQuality: 0.2) as NSData? {
         let imgPath = fullPath.appending(imgName)
         imageData.write(toFile: imgPath, atomically: true)
         print("imgPath=\(imgPath)")

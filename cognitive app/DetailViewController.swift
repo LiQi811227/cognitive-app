@@ -41,7 +41,7 @@ class DetailViewController: UIViewController {
         }
     }
     
-    private func display(_ itemID:Int){
+    public func display(_ itemID:Int){
         
         let itemList:[Item]? = readData() as? [Item]
         
@@ -52,18 +52,9 @@ class DetailViewController: UIViewController {
         wordFrom.text = item?.wordFrom
         wordTo.text = item?.wordTo
         
-        //TODO:display image getting from maskdomain
         let imgPathFromSandBox:String = getImageFromSandBox(fileName:item?.image ?? "jodan.jpg")
         let img: UIImage = UIImage(contentsOfFile: imgPathFromSandBox)!
         //let img: UIImage = UIImage(named: item?.image ?? "no.jpg")!
         image.image = img
     }
-    
-//    private func speech(_ text:String?){
-//        if let textForSpeech = text{
-//            //TODO:call remote api
-//            //TODO:call AVPlay
-//            print(textForSpeech)
-//        }
-//    }
 }
