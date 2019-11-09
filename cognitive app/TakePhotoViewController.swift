@@ -164,14 +164,14 @@ class TakePhotoViewController: UIViewController {
                                 self.wordFrom = returnString
                                 self.translate(returnString, "zh-Hans")
                             } else {
-                                returnString =  "Azure doesn't know what it is,haha."
+                                returnString =  "LiQi: No captions available"
                                 self.wordFrom = returnString
                                 self.translate(returnString, "zh-Hans")
                             }
                         }
                     } else {
                         DispatchQueue.main.async {
-                            returnString = "Azure doesn't know what it is,haha."
+                            returnString = "LiQi: No captions available"
                             self.wordFrom = returnString
                             self.translate(returnString, "zh-Hans")
                         }
