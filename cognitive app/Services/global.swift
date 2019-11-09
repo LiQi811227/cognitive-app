@@ -86,3 +86,4 @@ public func saveImageToSandBox(_ imgName:String, _ image:UIImage){
 public func getImageFromSandBox(fileName:String)->String{
     return fullPath.appending(fileName)
 }
+

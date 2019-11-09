@@ -164,14 +164,14 @@ class TakePhotoViewController: UIViewController {
                                 self.wordFrom = returnString
                                 self.translate(returnString, "zh-Hans")
                             } else {
-                                returnString =  "LiQi: No captions available"
+                                returnString =  "Azure doesn't know what it is,haha."
                                 self.wordFrom = returnString
                                 self.translate(returnString, "zh-Hans")
                             }
                         }
                     } else {
                         DispatchQueue.main.async {
-                            returnString = "LiQi: No captions available"
+                            returnString = "Azure doesn't know what it is,haha."
                             self.wordFrom = returnString
                             self.translate(returnString, "zh-Hans")
                         }
@@ -209,3 +209,4 @@ extension TakePhotoViewController:AVCapturePhotoCaptureDelegate{
         }
     }
 }
+

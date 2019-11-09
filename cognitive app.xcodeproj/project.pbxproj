@@ -24,6 +24,7 @@
 		4EEE35E0236E208400389628 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEE35DF236E208400389628 /* TableViewCell.swift */; };
 		4EEE35E2236E295D00389628 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEE35E1236E295D00389628 /* DetailViewController.swift */; };
 		4EEE35E4236E4D6000389628 /* global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEE35E3236E4D6000389628 /* global.swift */; };
+		4EF324BF2376ABC1005B1CC4 /* speech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF324BE2376ABC1005B1CC4 /* speech.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		4EEE35DF236E208400389628 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		4EEE35E1236E295D00389628 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4EEE35E3236E4D6000389628 /* global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = global.swift; sourceTree = "<group>"; };
+		4EF324BE2376ABC1005B1CC4 /* speech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = speech.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 			children = (
 				4EEE35E3236E4D6000389628 /* global.swift */,
 				4E8231BF236F8DB9001CD6C8 /* RemoteCall.swift */,
+				4EF324BE2376ABC1005B1CC4 /* speech.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				4E6272C9236D82B900B9D986 /* ViewController.swift in Sources */,
 				4E8231BA236EB30F001CD6C8 /* TakePhotoViewController.swift in Sources */,
 				4EEE35E0236E208400389628 /* TableViewCell.swift in Sources */,
+				4EF324BF2376ABC1005B1CC4 /* speech.swift in Sources */,
 				4E8231C2236F9FF0001CD6C8 /* TranslateWord.swift in Sources */,
 				4E6272C5236D82B900B9D986 /* AppDelegate.swift in Sources */,
 				4E6272C7236D82B900B9D986 /* SceneDelegate.swift in Sources */,

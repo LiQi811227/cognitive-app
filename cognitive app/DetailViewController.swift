@@ -58,3 +58,4 @@ class DetailViewController: UIViewController {
         image.image = img
     }
 }
+

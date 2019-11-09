@@ -47,3 +47,4 @@ extension Translation: Codable {}
     let translations: [Translation]
 }
 extension TranslateResult: Codable {}
+
